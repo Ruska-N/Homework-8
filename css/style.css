@@ -172,5 +172,4 @@
 .plane-front :hover {
     transform: scale(2, 2) rotate(25deg);
     transition: all 4s linear 1s;
-    
 }

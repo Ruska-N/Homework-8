@@ -4,7 +4,6 @@
     position: fixed;
     top: 7%;
     left: 28%;
-    transition: all 4s linear 1s;
 }
 .plane-front-image {
     width: 150px;
@@ -171,5 +170,6 @@
 
 
 .plane-front :hover {
-    transform: scale(2, 2) rotate(25deg);   
+    transform: scale(2, 2) rotate(25deg); 
+    transition: all 4s linear 1s;  
 }

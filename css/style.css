@@ -1,55 +1,176 @@
-.flower1 {
-    width: 100%;
-    height: 600px;
+
+.plane-front {
+    display: inline-block;
+    position: fixed;
+    top: 7%;
+    left: 28%;
+}
+.plane-front-image {
+    width: 150px;
+}
+.plane {
+    display: inline-block;
+    position: fixed;
+    left: -25%;
+    top: 40%;
+    animation: plane-image 10s 3s linear infinite;
+}
+.plane-image {
+    width: 200px;
+    transform: scaleX(-1) rotate(25deg);
+    
+}
+.fly1 {
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: butterfly 15s linear infinite;
+    animation-direction: alternate;
+}
+.fly1-image {
+    width: 50px;
+}
+.rabbit {
+    display: inline-block;
     position: fixed;
     bottom: 0;
-    /* position: relative; */
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    right: 0;
+    animation: rabbit 8s linear infinite;
+}
+.rabbit-image {
+    width: 120px;
+    transform: scaleX(-1);
+}
+.turtle {
+    display: inline-block;
+    position: fixed;
+    bottom: 15%;
+    left: 15%;
+    transform: scaleX(-1);
+    animation: turtle 25s linear infinite;
+}
+.turtle-image {
+    width: 100px;
+}
+.tulip {
+    display: inline-block;
+    position: fixed;
+    bottom: 6%;
+    right: 40%;
+}
+.tulip-image {
+    height: 150px;
     opacity: 0;
-    animation: flowers 5s 2s ease-in-out;
+    animation: tulip 7s 2s ease-in-out;
+    animation-fill-mode: forwards
+}
+.blue {
+    display: inline-block;
+    position: fixed;
+    bottom: 8%;
+    right: 30%;
+}
+.blue-image {
+    height: 120px;
+    opacity: 0;
+    animation: blue-flower 6s 3s ease-in-out;
+    animation-fill-mode: forwards
+}
+.purple {
+    display: inline-block;
+    position: fixed;
+    bottom: 7%;
+    right: 20%;
+}
+.purple-image {
+    height: 170px;
+    opacity: 0;
+    animation: blue-flower 5s 1s ease-in-out;
+    animation-fill-mode: forwards
+}
+.heart {
+    display: inline-block;
+    position: fixed;
+    bottom: 6%;
+    right: 10%;
+}
+.heart-image {
+    height: 150px;
+    opacity: 0;
+    animation: blue-flower 8s 4s ease-in-out;
     animation-fill-mode: forwards
 }
 
-.tulip {
-    width: 150px;
-    height: 300px;
+
+
+/* animations */
+@keyframes tulip {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-.blue-flower {
-    width: 200px;
-    height: 450px;
+@keyframes blue-flower {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-.purple-flower {
-    width: 150px;
-    height: 380px;
+@keyframes plane-image {
+    from {top: 40%; left: -25%;}
+    to {top: -25%; left: 70%;}
 }
-.heart {
-    width: 150px;
-    height: 500px;
+@keyframes butterfly {
+    0% {top: 50%; left: 50%;}
+    10% {top: 45%; left: 55%;}
+    20% {top: 50%; left: 60%;}
+    30% {top: 45%; left: 65%;}
+    40% {top: 50%; left: 70%;}
+    50% {top: 45%; left: 75%;}
+    60% {top: 50%; left: 80%;}
+    70% {top: 45%; left: 85%;}
+    80% {top: 50%; left: 90%;}
+    90% {top: 45%; left: 95%;}
+    100% {top: 50%; left: 100%;
+        transform: scaleX(-1);}
 }
-.rose {
-    width: 200px;
-    height: 350px;
+@keyframes turtle {
+    0% {bottom: 15%; left: 15%;
+        transform: scaleX(-1);}
+    45% {bottom: 28%; left: 45%;
+        transform: scaleX(-1);}
+    50% {transform: scaleX(1);}
+    95% {bottom: 15%; left: 15%;
+        transform: scaleX(1);}
+    100% {bottom: 15%; left: 15%;
+        transform: scaleX(-1);}
 }
-.butterfly1 {
-    width: 150px;
-    height: 120px;
-}
-.butterfly2 {
-    width: 200px;
-    height: 150px;
+@keyframes rabbit {
+    0% {bottom: 0; left: 0;}
+    5% {bottom: 10%; left: 5%;}
+    10% {bottom: 0; left: 10%;}
+    15% {bottom: 10%; left: 15%;}
+    20% {bottom: 0; left: 20%;}
+    25% {bottom: 10%; left: 25%;}
+    30% {bottom: 0; left: 30%;}
+    35% {bottom: 10%; left: 35%;}
+    40% {bottom: 0%; left: 40%;}
+    45% {bottom: 10%; left: 45%;}
+    50% {bottom: 0%; left: 50%;}
+    55% {bottom: 10%; left: 55%;}
+    60% {bottom: 0%; left: 60%;}
+    65% {bottom: 10%; left: 65%;}
+    70% {bottom: 0%; left: 70%;}
+    75% {bottom: 10%; left: 75%;}
+    80% {bottom: 0%; left: 80%;}
+    85% {bottom: 10%; left: 85%;}
+    90% {bottom: 0%; left: 90%;}
+    95% {bottom: 10%; left: 95%;}
+    100% {bottom: 0%; left: 100%;}
 }
 
 
-@keyframes flowers {
-    from {
-        opacity: 0;
-        top: 600px;
-    }
-    to {
-        opacity: 1;
-        top: 350px;
-    }
+
+
+.plane-front :hover {
+    transform: scale(2, 2) rotate(25deg);
+    transition: all 4s linear 1s;
     
 }

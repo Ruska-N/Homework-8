@@ -37,6 +37,7 @@
     bottom: 0;
     right: 0;
     animation: rabbit 8s linear infinite;
+    z-index: 100;
 }
 .rabbit-image {
     width: 120px;
